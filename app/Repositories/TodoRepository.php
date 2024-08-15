@@ -7,10 +7,14 @@ use App\Models\Todo;
 
 class TodoRepository implements TodoRepositoryInterface
 {
-    public function getTodos()
+    public function getTodos($skip = 0, $limit = 10)
     {
-        return Todo::get();
+        return Todo::skip($skip)
+            ->take($limit)
+            ->orderBy('created_at', 'desc')
+            ->get();
     }
+
     public function create(array $todo)
     {
         return Todo::create($todo);

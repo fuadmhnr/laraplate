@@ -14,9 +14,9 @@ class GetTodosUseCase implements GetTodosUseCaseInterface
         $this->todoRepository = $todoRepository;
     }
 
-    public function execute()
+    public function execute($skip = 0, $limit = 10)
     {
-        $result = $this->todoRepository->getTodos();
+        $result = $this->todoRepository->getTodos($skip, $limit);
 
         return [
             'status' => 'Retrieved All Todos',

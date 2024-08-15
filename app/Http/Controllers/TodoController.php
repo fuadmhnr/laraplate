@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contracts\UseCases\Todo\CreateTodoUseCaseInterface;
 use App\Contracts\UseCases\Todo\GetTodosUseCaseInterface;
 use App\Http\Requests\Todo\CreateRequest;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 
@@ -26,9 +27,12 @@ class TodoController extends Controller implements HasMiddleware
         ];
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $result = $this->getTodosUseCase->execute();
+        $skip = request('skip', 0);
+        $limit = request('limit', 10);
+
+        $result = $this->getTodosUseCase->execute($skip, $limit);
         return response()->json($result);
     }
 
