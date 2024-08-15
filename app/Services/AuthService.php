@@ -22,6 +22,8 @@ class AuthService implements AuthServiceInterface
         return [
             'user' => $user,
             'token' => $token,
+            'roles' => $user->getRoleNames(),
+            'permissions' => $user->getPermissionsViaRoles()
         ];
     }
 
