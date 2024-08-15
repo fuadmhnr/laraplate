@@ -12,5 +12,6 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::controller(TodoController::class)->prefix('todos')->group(function () {
+    Route::get('/', 'index');
     Route::post('/', 'create');
 });
