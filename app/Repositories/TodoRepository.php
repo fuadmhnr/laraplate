@@ -9,10 +9,7 @@ class TodoRepository implements TodoRepositoryInterface
 {
     public function getTodos($skip = 0, $limit = 10)
     {
-        return Todo::skip($skip)
-            ->take($limit)
-            ->orderBy('created_at', 'desc')
-            ->get();
+        return Todo::select('name')->filter()->get();
     }
 
     public function create(array $todo)

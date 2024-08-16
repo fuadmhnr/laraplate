@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20e088f7899057920c67a6741290baac",
+    "content-hash": "233d965e54b914b2ec11835799c7fe98",
     "packages": [
         {
             "name": "brick/math",
@@ -505,6 +505,62 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "faridlab/laravel-grammatical-query",
+            "version": "v9.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/faridlab/laravel-search-query.git",
+                "reference": "fbe573ce977b42190198080a2762560f363915b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/faridlab/laravel-search-query/zipball/fbe573ce977b42190198080a2762560f363915b6",
+                "reference": "fbe573ce977b42190198080a2762560f363915b6",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.20.14",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "helpers/helpers.php"
+                ],
+                "psr-4": {
+                    "SearchQuery\\FilterQueryString\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Farid Hidayat",
+                    "email": "e.faridhidayat@gmail.com",
+                    "role": "Senior Software Engineer"
+                }
+            ],
+            "description": "Search Query - Laravel package for filtering queries based on url query string parameters",
+            "homepage": "https://github.com/faridlab/laravel-search-query",
+            "keywords": [
+                "filter",
+                "filter-query-string",
+                "filter-querystring",
+                "query",
+                "query-string",
+                "querystring"
+            ],
+            "support": {
+                "source": "https://github.com/faridlab/laravel-search-query/tree/v9.0.5"
+            },
+            "time": "2022-11-24T15:34:09+00:00"
         },
         {
             "name": "fruitcake/php-cors",
